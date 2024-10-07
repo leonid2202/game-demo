@@ -1,0 +1,33 @@
+.players-list {
+  padding: 16px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 0;
+  }
+
+  ul {
+    flex-grow: 1;
+
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 8px 0px;
+      display: flex;
+      justify-content: space-between;
+
+      text-align: start;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
+  .join-button {
+    justify-self: flex-end;
+  }
+}

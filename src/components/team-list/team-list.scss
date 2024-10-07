@@ -1,0 +1,42 @@
+.team-list-wrapper {
+  border: 3px solid black;
+  border-radius: 16px;
+  padding: 16px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  &.left {
+    background-color: rgb(99, 211, 255);
+    border-color: rgb(0, 115, 160);
+  }
+
+  &.right {
+    background-color: rgb(255, 45, 45);
+    border-color: rgb(151, 0, 0);
+  }
+
+  -webkit-box-shadow: 5px 10px 22px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 10px 22px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 10px 22px -11px rgba(0, 0, 0, 0.75);
+
+  h1 {
+    margin: 0;
+  }
+
+  .team-list {
+    flex-grow: 1;
+    align-self: center;
+
+    list-style: none;
+    padding: 0;
+
+    li {
+      text-align: start;
+    }
+  }
+
+  .join-button {
+    justify-self: flex-end;
+  }
+}
