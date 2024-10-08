@@ -1,1 +1,1 @@
-export { StageLobby } from "./stage-lobby"
+export { StageLobby } from "./stage-lobby";

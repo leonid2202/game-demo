@@ -1,0 +1,58 @@
+.input-submit-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & input {
+    width: 300px;
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  & button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.guess-clues-list-container {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  gap: 24px;
+
+  .clues-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+
+    .clue-item {
+      display: inline-block;
+      padding: 4px 16px;
+      background: white;
+      font-size: 2rem;
+
+      -webkit-box-shadow: 5px 10px 22px -11px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 5px 10px 22px -11px rgba(0, 0, 0, 0.75);
+      box-shadow: 5px 10px 22px -11px rgba(0, 0, 0, 0.75);
+
+      -webkit-animation: clue-item-pop 0.6s cubic-bezier(0.6, 0.04, 0.68, 1.38)
+        both;
+      animation: clue-item-pop 0.6s cubic-bezier(0.6, 0.04, 0.68, 1.38) both;
+    }
+  }
+
+  @keyframes clue-item-pop {
+    0% {
+      opacity: 0;
+      transform: translateX(-1000px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

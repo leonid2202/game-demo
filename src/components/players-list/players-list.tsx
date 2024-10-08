@@ -1,12 +1,10 @@
-import { usePlayersList } from "playroomkit"
-import { FC } from "react"
-import { formatTeam } from "./helpers"
-import "./players-list.scss"
+import { usePlayersList } from "playroomkit";
+import { FC } from "react";
+import { formatTeam } from "./helpers";
+import "./players-list.scss";
 
-interface PlayersListProps {}
-
-export const PlayersList: FC<PlayersListProps> = ({}) => {
-  const list = usePlayersList(true)
+export const PlayersList: FC = () => {
+  const list = usePlayersList(true);
 
   return (
     <div className="players-list">
@@ -19,5 +17,5 @@ export const PlayersList: FC<PlayersListProps> = ({}) => {
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};

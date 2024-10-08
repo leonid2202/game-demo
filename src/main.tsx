@@ -1,16 +1,14 @@
-import { StrictMode } from "react"
-import { createRoot } from "react-dom/client"
-import App from "./App.tsx"
-import "./index.css"
-import { insertCoin } from "playroomkit"
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import { insertCoin } from "playroomkit";
+import { CONFIG } from "./constants/";
 
-insertCoin({
-  defaultPlayerStates: { teamId: undefined },
-  gameId: "uMblBO2cprpS70H2SNNA",
-}).then(() =>
+insertCoin(CONFIG).then(() =>
   createRoot(document.getElementById("root")!).render(
     <StrictMode>
       <App />
     </StrictMode>
   )
-)
+);

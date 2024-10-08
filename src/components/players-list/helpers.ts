@@ -1,14 +1,15 @@
 import { PlayerState } from "playroomkit";
-import { TeamId } from "../../types";
+import { Team } from "../../types";
 
 export const formatTeam = (player: PlayerState) => {
-    const team = player.getState('teamId') as (TeamId | undefined);
+  const team = player.getState("team") as Team | undefined;
 
-    switch (team) {
-        case 'left': 
-        return 'LEFT';
-        case 'right': 
-        return 'RIGHT';
-        default: return '---'
-    }
-}
+  switch (team) {
+    case "left":
+      return "Left";
+    case "right":
+      return "Right";
+    default:
+      return "---";
+  }
+};

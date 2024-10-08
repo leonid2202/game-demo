@@ -1,11 +1,19 @@
-import "./App.css"
-import { StageLobby } from "./components/stage-lobby"
-import { useGameStage } from "./hooks"
+import "./App.css";
+import { StageGame } from "./components/stage-game";
+import { StageLobby } from "./components/stage-lobby";
+import { useGameStage } from "./hooks";
 
 function App() {
-  const [gameStage] = useGameStage()
+  const [gameStage] = useGameStage();
 
-  return <>{gameStage === "lobby" && <StageLobby />}</>
+  switch (gameStage) {
+    case "lobby":
+      return <StageLobby />;
+    case "game":
+      return <StageGame />;
+    default:
+      return "Something went wrong :)";
+  }
 }
 
-export default App
+export default App;
